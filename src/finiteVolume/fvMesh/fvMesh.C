@@ -625,7 +625,7 @@ void Foam::fvMesh::mapFields(const mapPolyMesh& meshMap)
     MapDimensionedFields<tensor, fvMeshMapper, volMesh>(mapper);
 
     // Map all the clouds in the objectRegistry
-    mapClouds(*this, meshMap);
+    //mapClouds(*this, meshMap);
 
 
     const labelList& cellMap = meshMap.cellMap();
