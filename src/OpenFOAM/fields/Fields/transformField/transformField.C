@@ -85,11 +85,13 @@ void Foam::transformPoints
         rtf = tf;
     }
 
-    // Check if any rotation
-    if (mag(tr.r().R() - I) > SMALL)
-    {
-        transform(rtf, tr.r(), rtf);
-    }
+	Info << endl << "Warning: rotation disabled. This may cause not expected motion" << endl;
+
+    // Check if any rotation. Disable rotation temporaly, something most be reviewed here.
+    //if (mag(tr.r().R() - I) > SMALL)
+    //{
+      //  transform(rtf, tr.r(), rtf);
+    //}
 }
 
 
